@@ -1,0 +1,136 @@
+$sliderBacground: #009FB7;
+$sliderShadw: 3px 3px 5px #cccccc;;
+$gap20: 20px;
+
+.content{
+    width: 100%;
+    background-color: $sliderBacground;
+    border-radius: 4px;
+    box-shadow: $sliderShadw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: $gap20;
+    min-height: 350px;
+    position: relative;
+}
+.sliderButtonWrapper{
+    display: flex;
+    justify-content: space-between;
+    justify-content: center;
+}
+.textSlide{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+}
+.animation--right{
+    animation-duration: 1s;
+    animation-name: slideRight;
+}
+@keyframes  slideRight {
+    from {
+      margin-left: 20%;
+      opacity: 0;
+    }
+    to {
+      margin-left: 0%;
+      opacity: 1;
+    }
+  }
+  .animation--left{
+    animation-duration: 0.5s;
+    animation-name: slideLeft;
+  }
+  @keyframes  slideLeft {
+    from {
+      margin-right: 20%;
+      opacity: 0;
+    }
+  
+    to {
+      margin-right: 0%;
+      opacity: 1;
+    }
+  }
+.title{
+    margin: 0;
+    margin-bottom: $gap20;
+}
+.paragraph{
+    margin: 0;
+    margin-bottom: $gap20;
+    font-weight: 400;
+    line-height: 24px;
+    font-size: 14px;
+    padding: 0 35px;
+}
+
+.imageSlide{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: $gap20;
+    justify-content: center;
+    align-items: center;  
+} 
+ 
+.imageWrapper{
+    width: 100%;
+    position: relative;
+    padding-bottom: 60%;
+    margin-bottom: $gap20;
+}
+.image{
+    width: 100%;
+    position: absolute;
+    top:0  
+}
+.button--direction{
+  background-color: #696773;
+  padding: 10px 13px;
+  border-radius: 50px;
+  border: solid 2px #696773;
+  color: #FED766;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  opacity: 0.3;
+  margin: 10px;
+  z-index: 1;
+  
+  &:hover{
+    opacity: 0.8;
+    transition: 0.5s;
+  }
+
+}
+.button--right{
+  position: absolute;
+  right: 0;
+}
+.button--left{
+  position: absolute;
+  left: 0;
+}
+.fas{
+  color: #FED766;
+}
+.input--slides{
+  width: 55px;
+  border: 2px solid #696773;
+  border-radius: 10px 0 0 10px;
+  padding-left: 10px;
+  margin-left: 20px;
+}
+.button--submit{
+  border-radius: 0 10px 10px 0;
+  margin-right: 20px;
+  border: 2px solid #696773;
+  color: #FED766;
+  background-color: #696773;
+
+
+}
