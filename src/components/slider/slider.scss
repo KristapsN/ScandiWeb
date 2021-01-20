@@ -13,7 +13,7 @@ $buttonTextYellow: #FED766;
     justify-content: center;
     align-items: center;
     margin-bottom: $gap20;
-    min-height: 350px;
+    min-height: 400px;
     position: relative;
 }
 .sliderButtonWrapper{
@@ -28,32 +28,15 @@ $buttonTextYellow: #FED766;
     justify-content: center;
     align-items: center;
 }
-.animation--right{
-    animation-duration: 0.5s;
-    animation-name: slideRight;
+.animation{
+    animation-duration: 0.8s;
+    animation-name: slide;
 }
-@keyframes  slideRight {
+@keyframes  slide {
     from {
-      margin-left: 20%;
       opacity: 0;
     }
     to {
-      margin-left: 0%;
-      opacity: 1;
-    }
-  }
-  .animation--left{
-    animation-duration: 0.5s;
-    animation-name: slideLeft;
-  }
-  @keyframes  slideLeft {
-    from {
-      margin-right: 20%;
-      opacity: 0;
-    }
-  
-    to {
-      margin-right: 0%;
       opacity: 1;
     }
   }
@@ -68,7 +51,6 @@ $buttonTextYellow: #FED766;
     font-size: 14px;
 }
 .imageSlide{
-    width: 100%;
     display: flex;
     flex-direction: column;
     padding: $gap20;
@@ -76,7 +58,6 @@ $buttonTextYellow: #FED766;
     align-items: center;  
 } 
 .imageWrapper{
-    width: 100%;
     margin-bottom: $gap20;
 }
 .image{

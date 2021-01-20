@@ -3,7 +3,6 @@ import "./index.scss";
 import "flexboxgrid";
 import { ChoseSlide } from "./components/slider/choseSlide";
 import { SliderContent } from "./components/slider/sliderContent";
-import { AnimateDirection } from "./helperFunctions/slideAnimation";
 import { SwipeDirection } from "./helperFunctions/swipeDirection";
 import { Content } from "./data/content";
 import { GoToSlide } from "./helperFunctions/changeSlides";
@@ -16,24 +15,21 @@ const SliderApp = () => {
   const [swipeDirection, setSwipeDirection] = useState(0);
   const [sliderInput, setSliderInput] = useState(slideSwitch + 1);
   const [animation, setAnimation] = useState("");
-  const [slideDirection, setSlideDirection] = useState("");
 
   const slideNextHandler = () => {
-    setSlideDirection("right");
     setAnimation("");
     setSlideSwitch(NextSlide(slideSwitch, Content.length));
     setSliderInput(NextSlide(slideSwitch, Content.length) + 1);
   };
 
   const slidePrevHandler = () => {
-    setSlideDirection("left");
     setAnimation("");
     setSlideSwitch(PrevSlide(slideSwitch, Content.length) - 1);
     setSliderInput(PrevSlide(slideSwitch, Content.length));
   };
 
   useEffect(() => {
-    setAnimation(AnimateDirection(slideDirection));
+    setAnimation("animation")
   }, [slideSwitch]);
 
   const startHandler = (e: React.TouchEvent<HTMLDivElement>) => {
