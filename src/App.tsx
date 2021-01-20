@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./index.scss";
 import "flexboxgrid";
-import { Slider } from "./components/slider/slider";
+import { ChoseSlide } from "./components/slider/choseSlide";
 import { SliderContent } from "./components/slider/sliderContent";
 import { AnimateDirection } from "./helperFunctions/slideAnimation";
 import { SwipeDirection } from "./helperFunctions/swipeDirection";
@@ -80,7 +80,7 @@ const SliderApp = () => {
               slidePrevHandler={() => slidePrevHandler()}
               animation={animation}
             />
-            <Slider
+            <ChoseSlide
               slideInputHandler={(e) => slideInputHandler(e)}
               slideChangeHandler={(e) => slideChangeHandler(e)}
               inputValue={sliderInput}

@@ -8,7 +8,7 @@ type Props = {
   totalSlides: number;
 };
 
-export const Slider = ({
+export const ChoseSlide = ({
   slideChangeHandler,
   slideInputHandler,
   inputValue,
