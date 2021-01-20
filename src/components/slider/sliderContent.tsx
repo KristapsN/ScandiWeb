@@ -42,6 +42,7 @@ export const SliderContent:FC<Props> = ({
         iconName="fas fa-chevron-right"
         direction="button--right"
       />
+      {/* Content formating part */}
       {image ? (
         <div className={`${"slide--image "}` + `${animation}`}>
           <div className="slide--image--wrapper">
