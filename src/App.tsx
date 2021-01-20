@@ -55,6 +55,7 @@ const SliderApp = () => {
   };
 
   const slideChangeHandler = (e: React.FormEvent<HTMLFormElement>) => {
+    setAnimation("");
     e.preventDefault();
     setSliderInput(GoToSlide(sliderInput, slideSwitch) + 1);
     setSlideSwitch(GoToSlide(sliderInput, slideSwitch));

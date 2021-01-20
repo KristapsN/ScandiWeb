@@ -1,4 +1,4 @@
-import React from "react";
+import React, {FC} from "react";
 import "./slider.scss";
 import { SliderButton } from './arrowButton';
 
@@ -14,7 +14,7 @@ type Props = {
   animation: string;
 };
 
-export const SliderContent = ({
+export const SliderContent:FC<Props> = ({
   title,
   paragraph,
   image,
@@ -43,14 +43,14 @@ export const SliderContent = ({
         direction="button--right"
       />
       {image ? (
-        <div className={`${"imageSlide "}` + `${animation}`}>
-          <div className="imageWrapper">
-            <img className="image" src={image} alt={title} />
+        <div className={`${"slide--image "}` + `${animation}`}>
+          <div className="slide--image--wrapper">
+            <img className="slide--image" src={image} alt={title} />
           </div>
           <p className="paragraph">{paragraph}</p>
         </div>
       ) : (
-        <div className={`${"textSlide "}` + `${animation}`}>
+        <div className={`${"slider--text "}` + `${animation}`}>
           <h1 className="title">{title}</h1>
           <p className="paragraph">{paragraph}</p>
         </div>

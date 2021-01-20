@@ -1,4 +1,4 @@
-import React from "react";
+import React, {FC} from "react";
 import "./slider.scss";
 
 type Props = {
@@ -8,11 +8,15 @@ type Props = {
 
 };
 
-export const SliderButton = ({
+export const SliderButton:FC<Props> = ({
   slideNextPrevHandler, iconName, direction
 }: Props) => {
   return (
-    <button type="button" className={`${"button--direction "}` + `${direction}`} onClick={() => slideNextPrevHandler()}>
+    <button 
+      type="button" 
+      className={`${"button--direction "}` + `${direction}`} 
+      onClick={slideNextPrevHandler}
+    >
     <i className={`${iconName}`}></i>
     </button>
   )

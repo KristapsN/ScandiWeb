@@ -1,4 +1,4 @@
-import React from "react";
+import React, {FC} from "react";
 import "./slider.scss";
 
 type Props = {
@@ -8,14 +8,14 @@ type Props = {
   totalSlides: number;
 };
 
-export const ChoseSlide = ({
+export const ChoseSlide:FC<Props> = ({
   slideChangeHandler,
   slideInputHandler,
   inputValue,
   totalSlides,
 }: Props) => {
   return (
-    <div className="sliderButtonWrapper">
+    <div className="slider--button--wrapper">
       <form onSubmit={slideChangeHandler}>
         <label htmlFor="number">
           Slide:
@@ -23,7 +23,7 @@ export const ChoseSlide = ({
             className="input--slides"
             type="number"
             value={inputValue}
-            onChange={(e) => slideInputHandler(e)}
+            onChange={slideInputHandler}
           />
         </label>
         <button className="button--submit" type="submit">Change</button>

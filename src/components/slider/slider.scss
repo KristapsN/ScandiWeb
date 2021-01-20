@@ -16,12 +16,12 @@ $buttonTextYellow: #FED766;
     min-height: 400px;
     position: relative;
 }
-.sliderButtonWrapper{
+.slider--button--wrapper{
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.textSlide{
+.slider--text{
     display: flex;
     flex-direction: column;
     padding: 20px;
@@ -50,19 +50,26 @@ $buttonTextYellow: #FED766;
     line-height: 24px;
     font-size: 14px;
 }
-.imageSlide{
+.slide--image{
     display: flex;
     flex-direction: column;
     padding: $gap20;
     justify-content: center;
     align-items: center;  
+    width: 100%;
 } 
-.imageWrapper{
+.slide--image--wrapper{
     margin-bottom: $gap20;
+    position: relative;
+    padding-bottom: 50%;
+    width: 100%;
 }
-.image{
+.slide--image{
     width: 100%;
     border-radius: 4px;
+    position: absolute;
+    top: 0;
+    width: 100%;
 }
 .button--direction{
   background-color: $buttonDark;
